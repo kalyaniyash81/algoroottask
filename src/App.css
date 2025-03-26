@@ -1,0 +1,287 @@
+/* ================ BASE STYLES ================ */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* ================ LAYOUT STYLES ================ */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* General Styles */
+body {
+  background-color: #f8f9fa;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Centering the card */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Card Styling */
+.auth-card {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Header */
+.auth-card h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+/* Input Fields */
+.auth-card .form-control {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  transition: all 0.3s ease-in-out;
+}
+
+.auth-card .form-control:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+}
+
+/* Error Messages */
+.auth-card .form-control.is-invalid {
+  border-color: #dc3545;
+}
+
+/* Button Styling */
+.auth-card .btn-primary {
+  background-color: #6c63ff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.auth-card .btn-primary:hover {
+  background-color: #574bff;
+}
+
+/* Toggle between login & signup */
+.auth-card .switch-auth {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.auth-card .switch-auth button {
+  color: #6c63ff;
+  font-weight: 600;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.auth-card .switch-auth button:hover {
+  color: #574bff;
+  text-decoration: underline;
+}
+
+/* Forgot Password Link */
+.auth-card .forgot-password {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.auth-card .forgot-password button {
+  color: #6c63ff;
+  font-weight: 600;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.auth-card .forgot-password button:hover {
+  color: #574bff;
+  text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 15px;
+  }
+
+  .auth-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .auth-card .btn-primary {
+    padding: 8px;
+  }
+}
+
+
+/* ================ DASHBOARD STYLES ================ */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.dashboard-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.dashboard-main {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+  background-color: #f8f9fa;
+}
+
+.dashboard-sidebar {
+  background-color: #fff;
+  border-right: 1px solid #dee2e6;
+  width: 250px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  padding: 1rem;
+}
+
+.dashboard-navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1020;
+  background-color: #fff;
+}
+
+/* ================ TABLE STYLES ================ */
+.data-table-container {
+  margin-top: 1.5rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.data-table th {
+  cursor: pointer;
+  white-space: nowrap;
+  background-color: #f8f9fa;
+  padding: 0.75rem;
+}
+
+.data-table th:hover {
+  background-color: #e9ecef;
+}
+
+.data-table td {
+  padding: 0.75rem;
+  vertical-align: middle;
+  border-top: 1px solid #dee2e6;
+}
+
+/* ================ UTILITY STYLES ================ */
+.text-center {
+  text-align: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+/* ================ RESPONSIVE ADJUSTMENTS ================ */
+@media (max-width: 992px) {
+  .dashboard-sidebar {
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content,
+  .dashboard-content {
+    flex-direction: column;
+  }
+  
+  .dashboard-sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .dashboard-main {
+    padding: 1rem;
+  }
+  
+  .auth-card {
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .data-table {
+    font-size: 0.85rem;
+  }
+  
+  .data-table th,
+  .data-table td {
+    padding: 0.5rem;
+  }
+  
+  .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .auth-card-header,
+  .auth-card-body {
+    padding: 1rem;
+  }
+  
+  .dashboard-main {
+    padding: 0.75rem;
+  }
+}
